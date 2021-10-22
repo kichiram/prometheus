@@ -59,7 +59,7 @@ http://<ホスト名>:9090
 ```
 下記のように表示されれば成功です。
 ![image](https://user-images.githubusercontent.com/91726058/138374406-2be8a58c-7ff7-47a3-85a7-0128ef7422bc.png)
-IPアドレス、ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。
+* IPアドレス、ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。
 ##### 2.3. 実行中を中断します。
 EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
