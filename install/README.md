@@ -84,6 +84,7 @@ Type=simple
 ExecStart=/etc/prometheus/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/etc/prometheus/data
 
 [Install]
+WantedBy=multi-user.target
 ```
 ##### 3.3. daemonの自動起動設定と起動
 ```
