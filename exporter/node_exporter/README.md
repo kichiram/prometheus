@@ -77,7 +77,7 @@ $ sudo systemctl start node_exporter.service
 ```
 ##### 3.4. 起動確認
 ```
-$ $ sudo systemctl status node_exporter.service
+$ sudo systemctl status node_exporter.service
 ● node_exporter.service - The Prometheus Node Exporter exposes a wide variety of hardware- and kernel-related metr
 ics.
    Loaded: loaded (/usr/lib/systemd/system/node_exporter.service; enabled; vendor preset: disabled)
