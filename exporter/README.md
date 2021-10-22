@@ -4,7 +4,7 @@
 #### 公式、非公式のexporterなど多数存在しますがここでは下記のexporterのインストール方法を紹介します。
 ##### 1. [Node/system metrics exporter](https://github.com/prometheus/node_exporter)
 ハードウェアおよびOSのメトリクスを出力します。負荷状況などの監視が実現できます。
-[node_exporterのインストール方法](node_exporter/README.md)
+###### 1.1. [node_exporterのインストール方法](node_exporter/README.md)
 ##### 2. [Blackbox exporter](https://github.com/prometheus/blackbox_exporter)
 http/https/TCPなどの死活監視を実現できます。
 ##### 3. [Grok exporter](https://github.com/fstab/grok_exporter)
