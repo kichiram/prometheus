@@ -7,5 +7,6 @@
 ##### 1.1. [node_exporterのインストール方法](node_exporter/README.md)
 #### 2. [Blackbox exporter](https://github.com/prometheus/blackbox_exporter)
 http/https/TCPなどの死活監視を実現できます。基本的には監視サーバ（prometheusがインストールされているサーバ）にインストールして利用します。
+##### 2.1. [blackbox_exporterのインストール方法](blackbox_exporter/README.md)
 #### 3. [Grok exporter](https://github.com/fstab/grok_exporter)
 非構造化ログデータからメトリクスを出力します。ログ監視が実現できます。監視対象サーバにインストールして利用します。
