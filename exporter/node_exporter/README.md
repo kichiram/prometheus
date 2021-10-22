@@ -37,7 +37,7 @@ level=info ts=2021-10-22T08:38:19.006Z caller=node_exporter.go:183 msg="Build co
 ```
 ##### 2.2. ブラウザでアクセスできるか確認します。
 ```
-http://<ホスト名>:9100
+http://<ホスト名>:9100/metrics
 ```
 下記のように表示されれば成功です。
 ![image](https://user-images.githubusercontent.com/91726058/138423171-c603e53e-929b-4137-80d4-680c60bf1302.png)
@@ -92,5 +92,5 @@ Oct 22 08:53:40 ip-172-31-39-113.ap-northeast-1.compute.internal node_exporter[1
 ```
 active (running)と表示されていれば成功です。念のためブラウザでアクセスできるか確認しましょう。
 ```
-http://<ホスト名>:9100
+http://<ホスト名>:9100/metrics
 ```
