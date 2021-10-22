@@ -62,3 +62,51 @@ http://<ホスト名>:9090
 IPアドレス、ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。
 ##### 2.3. 実行中を中断します。
 EC2のインスタンスに戻りCTRL-Cで実行を中断します。
+#### 3. 常駐プロセス化
+daemon（常駐プロセス）にして管理しやすいようにします。
+##### 3.1. ファイル整理
+ファイルを/etc/prometheusディレクトリを作成し、その配下に移動します。
+```
+$ sudo mv ~/prometheus-2.30.3.linux-amd64 /etc/prometheus
+$ ls /etc/prometheus
+console_libraries  consoles  data  LICENSE  NOTICE  prometheus  prometheus.yml  promtool
+```
+##### 3.2. daemonの設定ファイル作成
+```
+$ sudo vi /usr/lib/systemd/system/prometheus.service
+[Unit]
+Description=Prometheus - Monitoring system and time series database
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/etc/prometheus/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/etc/prometheus/data
+
+[Install]
+```
+##### 3.3. daemonの自動起動設定と起動
+``
+$ sudo systemctl enable prometheus.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/prometheus.service to /usr/lib/systemd/system/pro
+metheus.service.
+$ sudo systemctl start prometheus.service
+```
+##### 3.4. 起動確認
+```
+$ sudo systemctl status prometheus.service
+● prometheus.service - Prometheus - Monitoring system and time series database
+   Loaded: loaded (/usr/lib/systemd/system/prometheus.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2021-10-22 02:48:12 UTC; 3min 12s ago
+     Docs: https://prometheus.io/docs/introduction/overview/
+ Main PID: 30411 (prometheus)
+   CGroup: /system.slice/prometheus.service
+           └─30411 /etc/prometheus/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/etc/prometheus/data
+
+Oct 22 02:48:12 ip-172-31-39-113.ap-northeast-1.compute.internal prometheus[30411]: level=info ts=2021-10-22T02...
+--- 省略 ---
+```
+active (running)と表示されていれば成功です。念のためブラウザでアクセスできるか確認しましょう。
+```
+http://<ホスト名>:9090
+```
