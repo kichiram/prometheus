@@ -29,7 +29,7 @@ blackbox_exporter-0.19.0.linux-amd64/blackbox_exporter
 ##### 2.1. 解凍したディレクトリに移動して実行します。
 ```
 $ cd blackbox_exporter-0.19.0.linux-amd64
-$ $ ./blackbox_exporter --config.file=blackbox.yml
+$ ./blackbox_exporter --config.file=blackbox.yml
 level=info ts=2021-10-22T09:22:59.513Z caller=main.go:224 msg="Starting blackbox_exporter" version="(version=0.19.
 0, branch=HEAD, revision=5d575b88eb12c65720862e8ad2c5890ba33d1ed0)"
 --- 省略 ---
