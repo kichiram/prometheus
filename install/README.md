@@ -32,7 +32,7 @@ prometheus-2.30.3.linux-amd64/promtool
 #### 2. 動作確認
 ##### 2.1. 解凍したディレクトリに移動して実行します。
 ```
-$ cd ~/prometheus-2.30.3.linux-amd64
+$ cd prometheus-2.30.3.linux-amd64
 $ ./prometheus --config.file prometheus.yml
 level=info ts=2021-10-22T00:15:39.221Z caller=main.go:400 msg="No time or size retention was set so using the defa
 ult time retention" duration=15d
