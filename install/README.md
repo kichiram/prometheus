@@ -86,7 +86,7 @@ ExecStart=/etc/prometheus/prometheus --config.file=/etc/prometheus/prometheus.ym
 [Install]
 ```
 ##### 3.3. daemonの自動起動設定と起動
-``
+```
 $ sudo systemctl enable prometheus.service
 Created symlink from /etc/systemd/system/multi-user.target.wants/prometheus.service to /usr/lib/systemd/system/pro
 metheus.service.
