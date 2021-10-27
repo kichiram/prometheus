@@ -46,7 +46,7 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: 127.0.0.1:9115
-   - job_name: "grok_exporter"
+  - job_name: "grok_exporter"
     static_configs:
       - targets: ["localhost:9144"]
    - job_name: "test_httpserver"
