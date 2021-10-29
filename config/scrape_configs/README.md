@@ -1,3 +1,7 @@
+# scrape_configs
+* メトリクスを収集したいターゲットを[prometheus.yml](prometheus.yml)に設定します。
+* また、blackbox_exporterを利用した死活監視用の設定も合わせて行ないます。
+
 # prometheus.ymlの入れ替え方法
 #### 1.ダウンロード
 ```
