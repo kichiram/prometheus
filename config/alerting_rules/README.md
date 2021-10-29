@@ -1,7 +1,7 @@
 
 CPU使用率
 ```
-100 - (avg by (instance) (irate(node_cpu{mode="idle", instance=~"^%s:.+"}[5m])) * 100)
+100 - (irate(node_cpu_seconds_total{mode="idle"}[5m]) * 100) 
 ```
 
 メモリ使用率
