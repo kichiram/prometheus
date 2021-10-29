@@ -4,7 +4,7 @@
 共通的な設定を記述します。
 ### 2. rule_files configuration
 [アラートルール](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)、[レコーディングルール](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/)を記載したファイルを指定します。
-### 3. scrape_configs configuration
+### 3. [scrape_configs configuration](https://github.com/kichiram/prometheus/blob/main/config/scrape_configs/README.md)
 メトリクスを収集するターゲットを指定します。
 ### 4. alerting configuration
 アラートに関する設定を記述します。
