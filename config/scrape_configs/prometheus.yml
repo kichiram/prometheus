@@ -49,7 +49,15 @@ scrape_configs:
   - job_name: "grok_exporter"
     static_configs:
       - targets: ["localhost:9144"]
+    metric_relabel_configs:  
+      - source_labels: [__name__]
+        regex: ^go_.*
+        action: drop
   - job_name: "test_httpserver"
     static_configs:
       - targets: ["localhost:8081"]
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: ^a_.*
+        action: keep
 # add to scrape_configs end
