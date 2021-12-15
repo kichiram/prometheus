@@ -1,4 +1,4 @@
-# config
+# grok_exporterの設定
 * ログのフォーマットを定義した[パターンファイル](config/patterns/test_httpserver)を用意します。
 * ログの監視設定を[config.yml](config/config.yml)に設定します。
 
