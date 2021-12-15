@@ -1,0 +1,18 @@
+global:
+    config_version: 2
+input:
+    type: file
+    path: /var/log/test_httpserver.log
+    readall: false # Read from the beginning of the file? False means we start at the end of the file and read only
+ new lines.
+grok:
+    patterns_dir: /etc/prometheus/grok_exporter/patterns
+metrics:
+    - type: counter
+      name: a_httpserver_hello_total
+      help: Total number of Hello! message.
+      match: '%{HTTPSERVER_HELLO_LOG}'
+      labels:
+          message: '{{.message}}'
+server:
+    port: 9144
