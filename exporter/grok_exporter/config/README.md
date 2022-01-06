@@ -44,3 +44,28 @@ Jan 06 09:20:39 ip-172-31-39-113.ap-northeast-1.compute.internal systemd[1]: Sta
 Jan 06 09:20:39 ip-172-31-39-113.ap-northeast-1.compute.internal grok_exporter[5507]: Starting server on http:/...
 Hint: Some lines were ellipsized, use -l to show in full.
 ```
+# メトリクスの出力と確認方法
+#### 1. grok_exporterのメトリクス確認
+下記にアクセスします。この段階では該当するログが無いため「a_httpserver_log_hello_total」は表示されません。
+```
+http://<ホスト名>:9144/metrics
+```
+#### 2. test_httpserverにリクエスト
+heollにアクセスします。（複数回やってみてください）
+```
+http://<ホスト名>:8080/hello
+```
+hello以外のログをカウントしない事を確認するため他にもアクセスします。
+```
+http://<ホスト名>:8080/world
+```
+#### 3. test_httpserverのログを確認
+下記コマンドでログを確認します。設定変更後に出力された「Hello!」ログがメトリクスの対象となります。
+```
+$ cat /var/log/test_httpserver.log
+```
+#### 4. 再度grok_exporterのメトリクス確認
+下記にアクセスします。ログ出力の件数と「a_httpserver_log_hello_total」のカウンタが一致していることを確認します。
+```
+http://<ホスト名>:9144/metrics
+```
