@@ -1,8 +1,8 @@
 # grok_exporterの設定
-* ログのフォーマットを定義した[パターンファイル](config/patterns/test_httpserver)を用意します。
-* ログの監視設定を[config.yml](config/config.yml)に設定します。
+* ログのフォーマットを定義した[パターンファイル](patterns/test_httpserver)を用意します。
+* ログの監視設定を[config.yml](config.yml)に設定します。
 
-今回設定するのは[test_httpserver](https://github.com/kichiram/golang/tree/main/http_server)で「Hello!」と出力されたログのカウンタを入れます。
+今回は[test_httpserver](https://github.com/kichiram/golang/tree/main/http_server)で「Hello!」と出力されたログのカウンタを入れます。また、labelにnameパラメータの値を設定します。
 
 # パターンファイルの追加方法
 #### 1.ダウンロード
@@ -54,6 +54,10 @@ http://<ホスト名>:9144/metrics
 heollにアクセスします。（複数回やってみてください）
 ```
 http://<ホスト名>:8080/hello
+```
+heollにnameパラメータを指定してアクセスします。（nameの値は適宜いじって大丈夫です）
+```
+http://<ホスト名>:8080/hello?name=hogehoge
 ```
 hello以外のログをカウントしない事を確認するため他にもアクセスします。
 ```
