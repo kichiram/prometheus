@@ -13,6 +13,6 @@ metrics:
       help: Total number of Hello! message.
       match: '%{HTTPSERVER_HELLO_LOG}'
       labels:
-          message: '{{.message}}'
+          name: '{{.name}}'
 server:
     port: 9144
