@@ -3,8 +3,8 @@ global:
 input:
     type: file
     path: /var/log/test_httpserver.log
-    readall: false # Read from the beginning of the file? False means we start at the end of the file and read only
- new lines.
+    readall: false # Read from the beginning of the file? False means we start at the end of the file and read only new lines.
+
 grok:
     patterns_dir: /etc/prometheus/grok_exporter/patterns
 metrics:
