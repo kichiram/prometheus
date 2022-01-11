@@ -8,12 +8,13 @@
 $ cd; mkdir ~/alerting_rules
 $ cd ~/alerting_rules rm -rf *.yml
 $ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/node_monitoring.yaml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_request.yaml
 $ ls *.yaml
-node_monitoring.yaml
+node_monitoring.yaml  test_httpserver_request.yaml
 ```
 #### 2. アラート設定ファイルのチェック
 ```
-$ /etc/prometheus/promtool check rules .*
+$ /etc/prometheus/promtool check rules *
 ```
 #### 2. アラート設定ファイルの配置
 ```
