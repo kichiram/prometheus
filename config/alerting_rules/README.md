@@ -5,12 +5,14 @@
 # アラート設定ファイルの設置
 #### 1. ダウンロード
 ```
-$ cd; mkdir ~/alerting_rules
-$ cd ~/alerting_rules rm -rf *.yml
+$ cd; mkdir -p ~/alerting_rules
+$ cd ~/alerting_rules; rm -rf *
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/blackbox.yaml
 $ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/node_monitoring.yaml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_log.yaml
 $ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_request.yaml
-$ ls *.yaml
-node_monitoring.yaml  test_httpserver_request.yaml
+$ $ ls
+blackbox.yaml  node_monitoring.yaml  test_httpserver_log.yaml  test_httpserver_request.yaml
 ```
 #### 2. アラート設定ファイルのチェック
 ```
