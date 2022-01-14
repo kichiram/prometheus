@@ -7,12 +7,12 @@
 ```
 $ cd; mkdir -p ~/alerting_rules
 $ cd ~/alerting_rules; rm -rf *
-$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/blackbox.yaml
-$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/node_monitoring.yaml
-$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_log.yaml
-$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_request.yaml
-$ $ ls
-blackbox.yaml  node_monitoring.yaml  test_httpserver_log.yaml  test_httpserver_request.yaml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/blackbox.yml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/node_monitoring.yml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_log.yml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/test_httpserver_request.yml
+$ ls
+blackbox.yml  node_monitoring.yml  test_httpserver_log.yml  test_httpserver_request.yml
 ```
 #### 2. アラート設定ファイルのチェック
 ```
