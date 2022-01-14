@@ -16,10 +16,10 @@ rule_files:
   # - "first_rules.yml"
   # - "second_rules.yml"
 # add to alerting_rules start
-  - /etc/prometheus/blackbox.yml
-  - /etc/prometheus/node_monitoring.yml
-  - /etc/prometheus/test_httpserver_log.yml
-  - /etc/prometheus/test_httpserver_request.yml
+  - /etc/prometheus/alerting_rules/blackbox.yml
+  - /etc/prometheus/alerting_rules/node_monitoring.yml
+  - /etc/prometheus/alerting_rules/test_httpserver_log.yml
+  - /etc/prometheus/alerting_rules/test_httpserver_request.yml
 # add to alerting_rules end
 
 # A scrape configuration containing exactly one endpoint to scrape:
