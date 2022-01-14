@@ -39,7 +39,7 @@ http://<ホスト名>:9144/metrics
 ```
 下記のように表示されれば成功です。
 ![image](https://user-images.githubusercontent.com/91726058/138435085-0994710f-666d-4572-894e-7723039c4989.png)
-* ホスト名の確認方法は[EC2インスタンスへの接続方法](../../aws/connect_ec2_instance/README.md)の「2.2」をご確認ください。
+* ホスト名の確認方法は[EC2インスタンスへの接続方法](https://github.com/kichiram/aws/tree/main/connect_ec2_instance/README.md)の「2.2」をご確認ください。
 ##### 2.3. 実行中を中断します。
 EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
