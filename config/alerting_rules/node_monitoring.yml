@@ -3,13 +3,13 @@ groups:
   rules:
   - alert: HighCPUUsage
     expr: 100 - (irate(node_cpu_seconds_total{mode="idle"}[5m]) * 100)  > 90
+    for: 5m
     labels:
       severity: critical
     annotations:
       summary: Average CPU usage for 5 minutes exceeds 90%
   - alert: HighMemoryUsage
     expr: 100 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100)  > 90
-    for: 1m
     labels:
       severity: critical
     annotations:
