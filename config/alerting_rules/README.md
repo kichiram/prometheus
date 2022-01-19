@@ -84,3 +84,16 @@ test_httpserverを停止する
 ```
 sudo systemctl stop test_httpserver
 ```
+復旧
+```
+$ sudo systemctl start test_httpserver
+```
+##### 6.4. HighCPUUsage
+CPUに負荷をかける（1度で上がらない場合は数回。ただし、やりすぎると応答なくなります）
+```
+$ for `seq 1 10`; do sh -c "yes > /dev/null &"; done
+```
+復旧
+```
+$ pgrep yes | xargs sudo kill
+```
