@@ -62,23 +62,12 @@ http://<ホスト名>:9090/config
 ```
 http://<ホスト名>:9090/rules
 ```
-アラートの発生状況が確認できます。
+#### 6. レコーディングルール確認
+6.1. CPU使用率
 ```
-http://<ホスト名>:9090/alerts
+http://<ホスト名>:9090/graph?g0.expr=node%3Acpu_usage%3Airate_5m&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=5m
 ```
-#### 6. アラート発生確認
-##### 6.1. HighRequest
-下記に数回アクセスする
+6.2. test_httpserverリクエスト数
 ```
-http://<ホスト名>:8080/world
-```
-##### 6.2. EmptyNameFound
-下記にアクセスする
-```
-http://<ホスト名>:8080/hello
-```
-##### 6.3. serviceDown
-test_httpserverを停止する
-```
-sudo systemctl stop test_httpserver
+http://<ホスト名>:9090/graph?g0.expr=test_httpserver%3Arequest%3Arate_5m&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=5m
 ```
