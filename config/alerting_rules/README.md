@@ -2,7 +2,7 @@
 [公式ドキュメント](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)
 ## 設定概要
 * アラート設定ファイルを用意します。
-* アラート設定ファイルをを[prometheus.yml](prometheus.yml)に設定します。
+* アラート設定ファイルを[prometheus.yml](prometheus.yml)に設定します。
 
 # アラート設定ファイルの設置
 #### 1. ダウンロード
