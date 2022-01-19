@@ -26,7 +26,7 @@ $ sudo cp -pr ~/recording_rules /etc/prometheus/
 #### 1.ダウンロード
 ```
 $ cd;rm -rf prometheus.yml
-$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/alerting_rules/prometheus.yml
+$ wget https://raw.githubusercontent.com/kichiram/prometheus/main/config/recording_rules/prometheus.yml
 $ ls prometheus.yml 
 prometheus.yml
 ```
