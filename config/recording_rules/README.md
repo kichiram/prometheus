@@ -20,7 +20,7 @@ $ /etc/prometheus/promtool check rules *
 ```
 #### 2. アラート設定ファイルの配置
 ```
-$ sudo cp -pr ~/alerting_rules /etc/prometheus/
+$ sudo cp -pr ~/recording_rules /etc/prometheus/
 ```
 # prometheus.ymlの入れ替え方法
 #### 1.ダウンロード
