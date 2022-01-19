@@ -1,4 +1,6 @@
 # grok_exporterの設定
+[公式ドキュメント](https://github.com/fstab/grok_exporter)
+## 設定概要
 * ログのフォーマットを定義した[パターンファイル](patterns/test_httpserver)を用意します。
 * ログの監視設定を[config.yml](config.yml)に設定します。
 
