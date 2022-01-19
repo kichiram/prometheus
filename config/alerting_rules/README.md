@@ -66,3 +66,19 @@ http://<ホスト名>:9090/rules
 ```
 http://<ホスト名>:9090/alerts
 ```
+#### 6. アラート発生確認
+##### 6.1. HighRequest
+下記に数回アクセスする
+```
+http://<ホスト名>:8080/world
+```
+##### 6.2. EmptyNameFound
+下記にアクセスする
+```
+http://<ホスト名>:8080/hello
+```
+##### 6.3. serviceDown
+test_httpserverを停止する
+```
+sudo systemctl stop test_httpserver
+```
