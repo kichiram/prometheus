@@ -58,8 +58,8 @@ $ sudo systemctl status prometheus.service
 ```
 http://<ホスト名>:9090/config
 ```
-設定したターゲットが確認できます。
+設定したアラートルールが確認できます。
 ```
-http://<ホスト名>:9090/targets
+http://<ホスト名>:9090/rules
 ```
 
