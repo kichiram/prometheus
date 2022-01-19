@@ -1,0 +1,9 @@
+groups:
+  - name: node
+    rules:
+    - record: node:cpu_usage_5m
+      expr: 100 - (irate(node_cpu_seconds_total{mode="idle"}[5m]) * 100)
+    - record: node:memory_usage
+      expr: 100 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100) 
+    - record: node:disk_usage
+      expr: 100 - (node_filesystem_avail_bytes / node_filesystem_size_bytes * 100)
