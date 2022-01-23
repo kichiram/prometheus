@@ -65,7 +65,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/etc/prometheus/grok_exporter/grok_exporter -config /etc/prometheus/grok_exporter/config.ym
+ExecStart=/etc/prometheus/grok_exporter/grok_exporter -config /etc/prometheus/grok_exporter/config.yml
 
 [Install]
 WantedBy=multi-user.target
