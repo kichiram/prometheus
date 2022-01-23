@@ -47,13 +47,14 @@ daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
 ファイルを/etc/prometheus/grok_exporterディレクトリを作成し、その配下に移動します。
 ```
-$ sudo mv ~/grok_exporter-0.2.8.linux-amd64 /etc/prometheus/grok_exporter
+$ sudo mkdir /etc/prometheus/grok_exporter
+$ sudo mv ~/grok_exporter-0.2.8.linux-amd64/* /etc/prometheus/grok_exporter
 $ ls /etc/prometheus/grok_exporter
 config.yml  example  grok_exporter  patterns
 ```
 ##### 3.2. 設定ファイル内のパスを置換
 ```
-$ sed -i -e 's/\.\//\/etc\/prometheus\/grok_exporter\//g' /etc/prometheus/grok_exporter/config.yml
+$ sudo sed -i -e 's/\.\//\/etc\/prometheus\/grok_exporter\//g' /etc/prometheus/grok_exporter/config.yml
 ```
 ##### 3.3. daemonの設定ファイル作成
 ```
