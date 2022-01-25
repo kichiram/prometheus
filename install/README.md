@@ -65,9 +65,10 @@ EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
 daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
-ファイルを/etc/prometheusディレクトリを作成し、その配下に移動します。
+/etc/prometheusディレクトリを作成し、ファイルをその配下に移動します。
 ```
-$ sudo mv ~/prometheus-2.30.3.linux-amd64 /etc/prometheus
+$ sudo mkdir /etc/prometheus
+$ sudo mv ~/prometheus-2.30.3.linux-amd64/* /etc/prometheus
 $ ls /etc/prometheus
 console_libraries  consoles  data  LICENSE  NOTICE  prometheus  prometheus.yml  promtool
 ```
