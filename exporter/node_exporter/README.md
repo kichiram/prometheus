@@ -47,7 +47,7 @@ EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
 daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
-ファイルを/etc/prometheus/node_exporterディレクトリを作成し、その配下に移動します。
+/etc/prometheus/node_exporterディレクトリを作成し、ファイルをその配下に移動します。
 ```
 $ sudo mv ~/node_exporter-1.2.2.linux-amd64 /etc/prometheus/node_exporter
 $ ls /etc/prometheus/node_exporter
