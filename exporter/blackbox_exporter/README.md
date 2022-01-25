@@ -48,7 +48,8 @@ daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
 /etc/prometheus/blackbox_exporterディレクトリを作成し、ファイルをその配下に移動します。
 ```
-$ sudo mv ~/blackbox_exporter-0.19.0.linux-amd64 /etc/prometheus/blackbox_exporter
+$ sudo mkdir /etc/prometheus/blackbox_exporter
+$ sudo mv ~/blackbox_exporter-0.19.0.linux-amd64/* /etc/prometheus/blackbox_exporter
 $ ls /etc/prometheus/blackbox_exporter
 blackbox_exporter  blackbox.yml  LICENSE  NOTICE
 ```
