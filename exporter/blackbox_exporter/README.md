@@ -46,7 +46,7 @@ EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
 daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
-ファイルを/etc/prometheus/blackbox_exporterディレクトリを作成し、その配下に移動します。
+/etc/prometheus/blackbox_exporterディレクトリを作成し、ファイルをその配下に移動します。
 ```
 $ sudo mv ~/blackbox_exporter-0.19.0.linux-amd64 /etc/prometheus/blackbox_exporter
 $ ls /etc/prometheus/blackbox_exporter
