@@ -49,7 +49,8 @@ daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
 /etc/prometheus/node_exporterディレクトリを作成し、ファイルをその配下に移動します。
 ```
-$ sudo mv ~/node_exporter-1.2.2.linux-amd64 /etc/prometheus/node_exporter
+$ sudo mkdir /etc/prometheus/node_exporter
+$ sudo mv ~/node_exporter-1.2.2.linux-amd64/* /etc/prometheus/node_exporter
 $ ls /etc/prometheus/node_exporter
 LICENSE  node_exporter  NOTICE
 ```
