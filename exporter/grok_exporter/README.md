@@ -16,7 +16,7 @@ Saving to: ‘grok_exporter-0.2.8.linux-amd64.zip’
 ```
 ##### 1.2. ダウンロードされたことを確認して解凍します。
 ```
-$  ls grok_exporter-0.2.8.linux-amd64.zip 
+$ ls grok_exporter-0.2.8.linux-amd64.zip 
 grok_exporter-0.2.8.linux-amd64.zip
 $ unzip grok_exporter-0.2.8.linux-amd64.zip
 Archive:  grok_exporter-0.2.8.linux-amd64.zip
