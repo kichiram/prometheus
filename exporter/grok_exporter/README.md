@@ -45,7 +45,7 @@ EC2のインスタンスに戻りCTRL-Cで実行を中断します。
 #### 3. 常駐プロセス化
 daemon（常駐プロセス）にして管理しやすいようにします。
 ##### 3.1. ファイル整理
-ファイルを/etc/prometheus/grok_exporterディレクトリを作成し、その配下に移動します。
+/etc/prometheus/grok_exporterディレクトリを作成し、ファイルをその配下に移動します。
 ```
 $ sudo mv ~/grok_exporter-0.2.8.linux-amd64 /etc/prometheus/grok_exporter
 $ ls /etc/prometheus/grok_exporter
