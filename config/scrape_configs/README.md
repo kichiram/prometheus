@@ -20,9 +20,9 @@ Checking prometheus.yml
 ```
 $ sudo cp -p prometheus.yml /etc/prometheus/
 ```
-#### 3. リスタート
+#### 3. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
 ```
-$ sudo systemctl restart prometheus.service
+$ sudo systemctl reload prometheus.service
 $ sudo systemctl status prometheus.service
 ● prometheus.service - Prometheus - Monitoring system and time series database
    Loaded: loaded (/usr/lib/systemd/system/prometheus.service; enabled; vendor preset: disabled)
