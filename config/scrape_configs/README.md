@@ -16,11 +16,11 @@ $ /etc/prometheus/promtool check config prometheus.yml
 Checking prometheus.yml
   SUCCESS: 0 rule files found
 ```
-#### 2. 上書き
+#### 3. 上書き
 ```
 $ sudo cp -p prometheus.yml /etc/prometheus/
 ```
-#### 3. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
+#### 4. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
 ```
 $ sudo systemctl reload prometheus.service
 $ sudo systemctl status prometheus.service
