@@ -17,8 +17,13 @@ node.yml  test_httpserver.yml
 #### 2. アラート設定ファイルのチェック
 ```
 $ /etc/prometheus/promtool check rules *
+Checking node.yml
+  SUCCESS: 3 rules found
+
+Checking test_httpserver.yml
+  SUCCESS: 2 rules found
 ```
-#### 2. アラート設定ファイルの配置
+#### 3. アラート設定ファイルの配置
 ```
 $ sudo cp -pr ~/recording_rules /etc/prometheus/
 ```
@@ -36,11 +41,11 @@ $ /etc/prometheus/promtool check config prometheus.yml
 Checking prometheus.yml
   SUCCESS: 0 rule files found
 ```
-#### 2. 上書き
+#### 3. 上書き
 ```
 $ sudo cp -p prometheus.yml /etc/prometheus/
 ```
-#### 3. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
+#### 4. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
 ```
 $ sudo systemctl reload prometheus.service
 $ sudo systemctl status prometheus.service
