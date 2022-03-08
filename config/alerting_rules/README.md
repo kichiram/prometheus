@@ -93,7 +93,7 @@ http://<ホスト名>:8080/hello
 ##### 6.3. serviceDown
 test_httpserverを停止する
 ```
-sudo systemctl stop test_httpserver
+$ sudo systemctl stop test_httpserver
 ```
 復旧
 ```
