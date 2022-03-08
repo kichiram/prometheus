@@ -19,8 +19,19 @@ blackbox.yml  node_monitoring.yml  test_httpserver_log.yml  test_httpserver_requ
 #### 2. アラート設定ファイルのチェック
 ```
 $ /etc/prometheus/promtool check rules *
+Checking blackbox.yml
+  SUCCESS: 1 rules found
+
+Checking node_monitoring.yml
+  SUCCESS: 4 rules found
+
+Checking test_httpserver_log.yml
+  SUCCESS: 1 rules found
+
+Checking test_httpserver_request.yml
+  SUCCESS: 1 rules found
 ```
-#### 2. アラート設定ファイルの配置
+#### 3. アラート設定ファイルの配置
 ```
 $ sudo cp -pr ~/alerting_rules /etc/prometheus/
 ```
@@ -38,11 +49,11 @@ $ /etc/prometheus/promtool check config prometheus.yml
 Checking prometheus.yml
   SUCCESS: 0 rule files found
 ```
-#### 2. 上書き
+#### 3. 上書き
 ```
 $ sudo cp -p prometheus.yml /etc/prometheus/
 ```
-#### 3. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
+#### 4. リロード（運用開始後はリスタートするとメトリクスが途切れるので設定ファイルの変更の場合はリロードを推奨）
 ```
 $ sudo systemctl reload prometheus.service
 $ sudo systemctl status prometheus.service
