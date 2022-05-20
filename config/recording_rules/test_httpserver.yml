@@ -4,4 +4,4 @@ groups:
     - record: test_httpserver:request:rate_5m
       expr: sum by (testlabel) (rate(a_http_request_count_total[5m]))
     - record: test_httpserver:log_hello:increase_1m
-      expr: sum by (name) )increase(a_httpserver_log_hello_total[1m]))
+      expr: sum by (name) (increase(a_httpserver_log_hello_total[1m]))
